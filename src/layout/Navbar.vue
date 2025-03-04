@@ -48,7 +48,7 @@ export default {
         },
   data() {
     return {
-      navbarVisible: false, // Control the visibility of the navbar
+      navbarVisible: false,
       items: [
         { title: "Home", icon: "mdi-home" },
         { title: "About", icon: "mdi-information" },

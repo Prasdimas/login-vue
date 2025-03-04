@@ -5,12 +5,33 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    // User
     username : '',
     password: '',
     rePassword: '',
     firstName: '',
     lastName: '',
     email: '',
+
+    // Filter
+    DateRange:[],
+    search:'',
+
+    // Form 
+    edit : '',
+    WOid : 0,
+    NameProduct : '',
+    NumberWO : '',
+    qty : '', 
+    selectedSatus : '',
+    selectedOperator : '',
+    Status : [
+      {"name": 'Pending', 'id': '1' },
+      {"name": 'in Progress', 'id': '2' },
+      {"name": 'Completed', 'id': '3' },
+      {"name": 'Cancelled', 'id': '4' },
+    ],
+    operators:[],
   },
   mutations: {
     SET_OBJECT(state, v) {

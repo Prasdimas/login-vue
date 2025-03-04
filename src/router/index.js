@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Auth from '../components/Auth.vue'
 import Dashboard from '../views/Dashboard.vue'
+import WorkOrder from '../views/WorkOrder.vue'
 import HelloWorld from '../components/HelloWorld.vue';
 
 Vue.use(VueRouter)
@@ -10,7 +11,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Auth
   },
   {
     path: '/dashboard',
@@ -21,6 +22,11 @@ const routes = [
         path: 'profile',
         name: 'DashboardProfile',
         component: HelloWorld
+      },
+      {
+        path: '',
+        name: 'WorkOrder',
+        component: WorkOrder
       },
     ]
   },

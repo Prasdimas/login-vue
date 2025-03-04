@@ -7,10 +7,12 @@
     <NavbarHeader></NavbarHeader>
 
     <!-- Main Content -->
-      <v-container class="pa-10">
+      <v-container>
         <v-row>
           <v-col class="pa-2">
-            <router-view/>
+           
+              <router-view/>
+         
           </v-col>
         </v-row>
       </v-container>
@@ -18,7 +20,7 @@
 </template>
 
 <script>
-import NavbarHeader from '../components/Navbar.vue';
+import NavbarHeader from '../layout/Navbar.vue';
 
 export default {
     components: {
@@ -26,7 +28,7 @@ export default {
         },
   data() {
     return {
-      navbarVisible: false, // Control the visibility of the navbar
+      navbarVisible: false, 
       items: [
         { title: "Home", icon: "mdi-home" },
         { title: "About", icon: "mdi-information" },
@@ -40,7 +42,6 @@ mini: false,
   },
   methods: {
     toggleNavbar() {
-      // Toggle the visibility of the navbar
       this.navbarVisible = !this.navbarVisible;
     }
   },
